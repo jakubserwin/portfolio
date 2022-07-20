@@ -1,0 +1,11 @@
+@use 'colors' as *;
+
+:root {
+  --text: #{$black};
+  --background: #{$white};
+}
+  
+.dark {
+  --text: #{$white};
+  --background: #{$black};
+}
