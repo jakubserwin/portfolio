@@ -13,6 +13,10 @@ html {
   background: var(--background);
 }
 
+body {
+  overflow-x: hidden;
+}
+
 ul {
   list-style: none;
 }
@@ -35,9 +39,8 @@ ul {
   }
 }
 
-.test {
-  margin-top: 1rem;
-  background-color: var(--background);
-  color: var(--text);
-  padding: 10px;
+.hide {
+  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
+  overflow: hidden;
 }

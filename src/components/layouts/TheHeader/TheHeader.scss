@@ -45,7 +45,7 @@
       height: 100vh;
       height: calc(var(--vh, 1vh) * 100);
       width: 100%;
-      //background: $color-dark;
+      background: var(--background);
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -65,7 +65,7 @@
         }
 
         svg path {
-          //fill: $color-gray;
+          fill: var(--text)
         }
       }
     }
@@ -74,15 +74,8 @@
   &__link {
     transition: color 0.3s;
     cursor: pointer;
+
     @include font-styling;
-
-    @include respond(tab-small) {
-      //color: $font-color-primary;
-    }
-
-    &:hover {
-      //color: $font-color-primary;
-    }
   }
 }
 

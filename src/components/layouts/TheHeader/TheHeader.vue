@@ -1,5 +1,9 @@
 <script setup lang="ts">
+import { useNavStore } from '@/store/nav'
 import 'scroll-behavior-polyfill';
+import HamburgerMenu from "@/components/layouts/TheHeader/HamburgerMenu/HamburgerMenu.vue";
+
+const nav = useNavStore()
 
 const polyfillScroll = (e: any): void => {
   const targetId = e.target.dataset.target;
@@ -16,8 +20,9 @@ const polyfillScroll = (e: any): void => {
   });
 }
 
-const toggleNav = (): void => { console.warn('hi')}
-
+const toggleNav = (): void => {
+  nav.toggleNav()
+}
 </script>
 
 <template>
@@ -59,9 +64,8 @@ const toggleNav = (): void => { console.warn('hi')}
         </li>
       </ul>
       <ul
-        ref="nav"
         class="header__list header__list--mobile"
-        :class="{ active: isActive }"
+        :class="{ 'active': nav.isNavActive }"
       >
         <li>
           <a
@@ -156,7 +160,7 @@ const toggleNav = (): void => { console.warn('hi')}
           </a>
         </li>
       </ul>
-<!--      <hamburger-menu />-->
+      <hamburger-menu />
     </nav>
   </header>
 </template>
