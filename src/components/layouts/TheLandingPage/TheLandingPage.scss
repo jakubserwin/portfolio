@@ -1,0 +1,130 @@
+@use './src/styles' as *;
+
+.landing-page {
+  height: 100vh;
+  display: flex;
+
+  @include respond(tab-small) {
+    height: auto;
+  }
+
+  @media screen
+  and (orientation: landscape)
+  and (min-device-width: 370px)
+  and (max-device-width: 850px) {
+    height: auto;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    flex: 1;
+    display: grid;
+    grid: {
+      row-gap: 5%;
+      column-gap: 5rem;
+      template-columns: 1fr 1fr;
+      template-rows: 60% 35%;
+    }
+    align-items: center;
+
+    /* ----------- Laptop ----------- */
+    @media screen
+    and (min-device-width: 1200px)
+    and (max-device-width: 1600px)
+    and (-webkit-min-device-pixel-ratio: 1) {
+      grid-template-rows: 62% 33%;
+    }
+
+    @include respond(tab-big) {
+      grid-template-columns: 1fr;
+      grid-column-gap: 0;
+      justify-items: center;
+    }
+
+    @include respond(tab-small) {
+      grid-template-rows: 1fr 1fr;
+      grid-row-gap: 1rem;
+    }
+
+    @media screen
+    and (orientation: landscape)
+    and (min-device-width: 370px)
+    and (max-device-width: 850px) {
+      //grid-row-gap: $margin-secondary-mobile;
+      //margin-top: $margin-secondary-mobile;
+    }
+  }
+
+  &__content {
+    @include respond(tab-big) {
+      text-align: center;
+    }
+  }
+
+  &__hello,
+  &__heading,
+  &__subheading,
+  a {
+    opacity: 0;
+    animation: show-short 0.5s forwards;
+  }
+
+  &__heading {
+    @include font-styling(var(--heading-primary), 500);
+    animation-delay: 0.75s;
+
+    span {
+      color: transparent;
+      display: inline-block;
+      background-image: linear-gradient(to right, #06bfff 50%, #2b74ff 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+
+    @include respond(tab-big) {
+      max-width: 50rem;
+      margin: 0 auto;
+    }
+  }
+
+  &__subheading {
+    animation-delay: 1s;
+
+    @include font-styling(var(--heading-tertiary), 300);
+
+    margin: {
+      top: 2rem;
+      bottom: 3rem;
+    }
+
+    @include respond(tab-big) {
+      max-width: 50rem;
+    }
+  }
+
+  a {
+    animation-delay: 1.25s;
+  }
+
+  &__hello {
+    @include font-styling;
+    margin-bottom: 1rem;
+    animation-delay: 0.5s;
+  }
+}
+
+@keyframes show-short {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+

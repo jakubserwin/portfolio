@@ -1,0 +1,107 @@
+@use './src/styles' as *;
+
+.header {
+  padding: 3rem 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__logo a,
+  &__link {
+    text-decoration: none;
+  }
+
+  &__logo,
+  &__list--desktop {
+    opacity: 0;
+    animation: show-short 0.2s forwards;
+  }
+
+  &__logo a {
+    position: relative;
+    z-index: 10;
+    @include font-styling(var(--heading-tertiary), 500);
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+
+    &--desktop {
+      animation-delay: 0.3s;
+
+      @include respond(tab-small) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      display: none;
+      position: absolute;
+      z-index: 10;
+      left: 100%;
+      top: 0;
+      height: 100vh;
+      height: calc(var(--vh, 1vh) * 100);
+      width: 100%;
+      //background: $color-dark;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      transition: all 1s;
+
+      @include respond(tab-small) {
+        display: flex;
+      }
+
+      li:last-child {
+        display: flex;
+        gap: 1.5rem;
+
+        svg {
+          width: 3rem;
+          height: 3rem;
+        }
+
+        svg path {
+          //fill: $color-gray;
+        }
+      }
+    }
+  }
+
+  &__link {
+    transition: color 0.3s;
+    cursor: pointer;
+    @include font-styling;
+
+    @include respond(tab-small) {
+      //color: $font-color-primary;
+    }
+
+    &:hover {
+      //color: $font-color-primary;
+    }
+  }
+}
+
+.active {
+  transform: translateX(-100%);
+}
+
+button {
+  position: relative;
+  z-index: 100;
+}
+
+@keyframes show-short {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

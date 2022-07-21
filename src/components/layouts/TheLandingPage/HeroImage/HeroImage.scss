@@ -1,0 +1,209 @@
+@use './src/styles' as *;
+
+.hero-img {
+  @include respond(tab-big) {
+    display: none;
+  }
+  svg {
+    overflow: visible;
+    width: 100%;
+  }
+}
+
+#flower-1,
+#flower-2,
+#btn-1,
+#btn-2,
+#btn-3 {
+  fill: var(--text);
+}
+
+#frame,
+#creature,
+#frame-2,
+#frame-3,
+#circle,
+#bar-4,
+#bar-5,
+#bgc,
+#laptop,
+#link-1,
+#link-2,
+#link-3,
+#pot,
+#pot-flower-1,
+#pot-flower-2,
+#pot-flower-3,
+#desk,
+#flower-1,
+#flower-2 {
+  opacity: 0;
+}
+
+#frame {
+  animation: show-short 0.3s 1.5s forwards;
+  path {
+    fill: var(--text);
+  }
+}
+
+#btn {
+  &-1,
+  &-2,
+  &-3 {
+    opacity: 0;
+    animation: show-short 0.15s forwards;
+  }
+
+  &-1 {
+    animation-delay: 1.6s;
+  }
+  &-2 {
+    animation-delay: 1.7s;
+  }
+  &-3 {
+    animation-delay: 1.8s;
+  }
+}
+
+#creature,
+#bar-1,
+#bar-2,
+#bar-3,
+#cta {
+  opacity: 0;
+  animation: show-long 0.2s 2s forwards;
+}
+
+#frame-2,
+#frame-3,
+#circle,
+#bar-4,
+#bar-5 {
+  animation: show-long 0.15s 2.25s forwards;
+}
+
+#bgc {
+  animation: slide-in 0.2s 2.5s forwards;
+}
+
+#laptop {
+  animation: show-long 0.2s 2.75s forwards;
+}
+
+#link-1 {
+  animation: show-short 0.2s 2.75s forwards;
+}
+
+#link-2 {
+  animation: show-short 0.2s 2.85s forwards;
+}
+
+#link-3 {
+  animation: show-short 0.2s 2.95s forwards;
+}
+
+#desk {
+  animation: show-short 0.2s 2.95s forwards;
+}
+
+#pot,
+#pot-flower-1,
+#pot-flower-2,
+#pot-flower-3 {
+  animation: show-long 0.25s 3.15s forwards;
+}
+
+#leaf-1 {
+  transform-origin: bottom center;
+  animation: wave-1 3s linear 4.6s infinite;
+}
+
+#leaf-2 {
+  transform-origin: bottom center;
+  transform: rotate(2deg) skew(-3deg) translate(-17px, -4px);
+  animation: wave-2 3s linear 4.6s infinite;
+}
+
+#leaf-3 {
+  transform-origin: bottom center;
+  transform: rotate(2deg) skew(-3deg) translate(-15px, -4px);
+  animation: wave-3 3s linear 4.6s infinite;
+}
+
+#flower-1 {
+  animation: show-short 0.2s 3.4s forwards;
+}
+
+#flower-2 {
+  animation: show-short 0.2s 3.5s forwards;
+}
+
+@keyframes show-short {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-long {
+  from {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes wave-1 {
+  0% {
+    transform: rotate(0) skew(0) translate(0);
+  }
+  50% {
+    transform: rotate(-1deg) skew(2deg) translate(8px, 2px);
+  }
+  100% {
+    transform: rotate(0) skew(0) translate(0);
+  }
+}
+
+@keyframes wave-2 {
+  0% {
+    transform: rotate(2deg) skew(-3deg) translate(-17px, -4px);
+  }
+  50% {
+    transform: rotate(0) skew(0) translate(0);
+  }
+  100% {
+    transform: rotate(2deg) skew(-3deg) translate(-17px, -4px);
+  }
+}
+
+@keyframes wave-3 {
+  0% {
+    transform: rotate(2deg) skew(-3deg) translate(-15px, -4px);
+  }
+  50% {
+    transform: rotate(0) skew(0) translate(0);
+  }
+  100% {
+    transform: rotate(2deg) skew(-3deg) translate(-15px, -4px);
+  }
+}
