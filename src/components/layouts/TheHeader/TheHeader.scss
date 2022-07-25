@@ -1,7 +1,7 @@
 @use './src/styles' as *;
 
 .header {
-  padding: 3rem 0;
+  padding: $base-gap-size  * 4 0;
 
   display: flex;
   align-items: center;
@@ -26,7 +26,7 @@
 
   &__list {
     display: flex;
-    gap: 3rem;
+    gap: $base-gap-size * 2;
 
     &--desktop {
       animation-delay: 0.3s;
@@ -57,7 +57,7 @@
 
       li:last-child {
         display: flex;
-        gap: 1.5rem;
+        gap: $base-gap-size * 2;
 
         svg {
           width: 3rem;
@@ -75,7 +75,11 @@
     transition: color 0.3s;
     cursor: pointer;
 
-    @include font-styling;
+    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+
+    &:hover {
+      color: var(--text);
+    }
   }
 }
 

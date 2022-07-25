@@ -2,10 +2,12 @@
 
 :root {
   --text: #{$black};
+  --text-secondary: #{$dark-grey};
   --background: #{$white};
 }
-  
+
 .dark {
   --text: #{$white};
+  --text-secondary: #{$bright-grey};
   --background: #{$black};
 }

@@ -8,7 +8,7 @@
 
   .container {
     padding: 0 10rem;
-    margin-top: 5rem;
+    margin-top: $base-gap-size;
 
     @include respond(desktop-small) {
       padding: 0 2.5rem;
@@ -26,18 +26,12 @@
 
   &__cards {
     display: flex;
-    gap: 10rem;
-
-    @include respond(desktop-small) {
-      gap: 5rem;
-    }
-
-    @include respond(tab-big) {
-      gap: 3rem;
-    }
+    justify-content: space-between;
+    gap: $base-gap-size * 5;
 
     @include respond(tab-small) {
       flex-direction: column;
+      gap: $base-gap-size * 4;
     }
   }
 }

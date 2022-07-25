@@ -54,8 +54,8 @@
     and (orientation: landscape)
     and (min-device-width: 370px)
     and (max-device-width: 850px) {
-      //grid-row-gap: $margin-secondary-mobile;
-      //margin-top: $margin-secondary-mobile;
+      grid-row-gap: $gap-size-secondary-mobile;
+      margin-top: $gap-size-secondary-mobile;
     }
   }
 
@@ -81,7 +81,6 @@
       color: transparent;
       display: inline-block;
       background-image: linear-gradient(to right, #06bfff 50%, #2b74ff 100%);
-      background-clip: text;
       -webkit-background-clip: text;
     }
 
@@ -93,17 +92,13 @@
 
   &__subheading {
     animation-delay: 1s;
-
-    @include font-styling(var(--heading-tertiary), 300);
-
-    margin: {
-      top: 2rem;
-      bottom: 3rem;
-    }
+    margin: $base-gap-size * 2 0;
 
     @include respond(tab-big) {
       max-width: 50rem;
     }
+
+    @include font-styling(var(--heading-tertiary), 300, var(--text-secondary));
   }
 
   a {
@@ -111,9 +106,10 @@
   }
 
   &__hello {
-    @include font-styling;
-    margin-bottom: 1rem;
+    margin-bottom: $base-gap-size * 2;
     animation-delay: 0.5s;
+
+    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
   }
 }
 
