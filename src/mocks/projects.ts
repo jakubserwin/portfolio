@@ -7,6 +7,10 @@ import React from '@/assets/images/projects/react.svg'
 import Spring from '@/assets/images/projects/spring.svg'
 import Sass from '@/assets/images/projects/sass.svg'
 import Vue from '@/assets/images/projects/vue.svg'
+import TypeScript from '@/assets/images/projects/typescript.svg'
+import GraphQL from '@/assets/images/projects/graphql.svg'
+import Express from '@/assets/images/projects/express.svg'
+import MongoDB from '@/assets/images/projects/mongo.svg'
 
 import { Project, ProjectStatus } from "@/types";
 
@@ -105,6 +109,35 @@ export const projects: Project[] = [
                 'Creating dynamic components with data received from backend side. Generating, modifying JSON objects and sending it to server.',
             summary:
                 'Participating in hackathon was really fun and completely new experience for me. I had an opportunity to check if I am able to work on project for 24 hours straight. After submitting the project the jurors awarded prizes to 3 the best teams from 27 participating and I am happy to say that we were one of them.',
+        },
+    },
+    {
+        id: 4,
+        name: 'flow',
+        logo: Flow,
+        bgColor: '#4F8A73',
+        tools: [
+            Vue,
+            TypeScript,
+            GraphQL,
+            Express,
+            MongoDB
+        ],
+        demo: '',
+        link: '',
+        repository: '',
+        status: ProjectStatus.IN_PROGRESS,
+        details: {
+            title: 'Flow',
+            caption: 'Manage team projects or create a personal system to manage daily tasks and problems.',
+            description: '',
+            problem: '',
+            timeline: '',
+            industry: '',
+            goals: '',
+            role1: '',
+            role2: '',
+            summary: '',
         },
     },
 ];

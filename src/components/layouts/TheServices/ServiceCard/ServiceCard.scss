@@ -43,7 +43,7 @@
     }
   }
 
-  ::v-deep(svg) {
+  :deep(svg) {
     path {
       fill: var(--text);
     }

@@ -1,0 +1,12 @@
+@use './src/styles' as *;
+
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
+  gap: $base-gap-size * 3;
+  //transition: all 1s;
+
+  @include respond(tab-small) {
+    grid-template-columns: 1fr;
+  }
+}

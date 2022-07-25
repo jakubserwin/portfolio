@@ -1,7 +1,14 @@
 @use './src/styles' as *;
 
+.dark .project-card__content {
+  border: 1px solid $dark-grey;
+  border-top: none;
+}
+
 .project-card {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
   border-radius: 0 0 4px 4px;
 
   &__header {
@@ -12,6 +19,8 @@
   }
 
   &__content {
+    border-radius: 0 0 4px 4px;
+    flex: 1;
     display: flex;
     flex-direction: column;
     gap: $base-gap-size * 2;
@@ -25,6 +34,7 @@
   }
 
   &__footer {
+    margin-top: auto;
     flex-direction: row;
     align-items: end;
     justify-content: space-between;
@@ -45,9 +55,12 @@
   &__tools {
     display: flex;
     gap: $base-gap-size;
+    margin-top: 2px;
   }
 
   &__cta {
+    @include font-styling(var(--caption), 400);
+
     a {
       display: flex;
       align-items: center;
@@ -55,6 +68,19 @@
       text-decoration: none;
 
       @include font-styling(var(--caption), 400);
+
+      :deep(svg) {
+        path {
+          fill: var(--text);
+        }
+      }
+    }
+  }
+
+  :deep(#express) {
+    fill: red;
+    path {
+      fill: red;
     }
   }
 }

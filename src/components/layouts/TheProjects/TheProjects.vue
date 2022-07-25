@@ -22,3 +22,5 @@ import { projects } from "@/mocks/projects";
   </section>
 </template>
 
+<style lang="scss" scoped src="./TheProjects.scss" />
+
