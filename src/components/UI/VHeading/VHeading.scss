@@ -1,0 +1,18 @@
+@use './src/styles' as *;
+
+.heading {
+  @include font-styling(var(--heading-secondary), 500);
+
+  margin-bottom: $gap-size-secondary-desktop;
+
+  @include respond(tab-big) {
+    //margin-bottom: $margin-secondary-tablet;
+  }
+
+  text-align: center;
+  transition: all 1s;
+
+  &__dark {
+    color: $black;
+  }
+}

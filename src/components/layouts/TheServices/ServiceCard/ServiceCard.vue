@@ -2,7 +2,7 @@
 import { Service } from "@/types";
 
 interface Props {
-  service: Service
+  service: Service;
 }
 
 const props = defineProps<Props>()

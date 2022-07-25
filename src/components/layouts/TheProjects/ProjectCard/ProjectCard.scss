@@ -1,0 +1,60 @@
+@use './src/styles' as *;
+
+.project-card {
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 0 0 4px 4px;
+
+  &__header {
+    display: grid;
+    place-content: center;
+    padding: $base-gap-size 0;
+    border-radius: 4px 4px 0 0;
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: $base-gap-size * 2;
+    padding: $base-gap-size * 2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  &__footer {
+    flex-direction: row;
+    align-items: end;
+    justify-content: space-between;
+  }
+
+  &__label {
+    @include font-styling(var(--caption), 400, var(--text-secondary))
+  }
+
+  &__name {
+    @include font-styling(var(--heading-tertiary), 500, var(--text))
+  }
+
+  &__caption {
+    @include font-styling;
+  }
+
+  &__tools {
+    display: flex;
+    gap: $base-gap-size;
+  }
+
+  &__cta {
+    a {
+      display: flex;
+      align-items: center;
+      gap: $base-gap-size;
+      text-decoration: none;
+
+      @include font-styling(var(--caption), 400);
+    }
+  }
+}
