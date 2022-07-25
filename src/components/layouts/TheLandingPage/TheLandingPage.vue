@@ -20,6 +20,9 @@ import HeroImage from "@/components/layouts/TheLandingPage/HeroImage/HeroImage.v
             I love designing and creating websites to help people grow their business without the
             need to wake myself with coffee.
           </h2>
+          <button class="landing-page__button">
+            See My Work
+          </button>
           <!--          <v-button :link="false" data-target="#projects" @click="polyfillScroll">-->
           <!--            See My Work-->
           <!--          </v-button>-->

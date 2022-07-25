@@ -68,7 +68,7 @@
   &__hello,
   &__heading,
   &__subheading,
-  a {
+  &__button {
     opacity: 0;
     animation: show-short 0.5s forwards;
   }
@@ -101,15 +101,29 @@
     @include font-styling(var(--heading-tertiary), 300, var(--text-secondary));
   }
 
-  a {
-    animation-delay: 1.25s;
-  }
-
   &__hello {
     margin-bottom: $base-gap-size * 2;
     animation-delay: 0.5s;
 
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+  }
+
+  &__button {
+    animation-delay: 1.25s;
+    padding: 1.2rem $base-gap-size * 3;
+    text-decoration: none;
+    border: none {
+      radius: 0.4rem;
+    }
+    background: linear-gradient(to right, #06bfff 50%, #2b74ff 100%) right 0 / 200%;
+    transition: background-position 300ms ease-in;
+    cursor: pointer;
+
+    &:hover {
+      background-position: left 0;
+    }
+
+    @include font-styling(var(--base-font-size), 500, $white);
   }
 }
 
