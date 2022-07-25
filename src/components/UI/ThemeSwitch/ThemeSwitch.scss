@@ -1,0 +1,15 @@
+@use './src/styles' as *;
+
+.theme-switch {
+  position: fixed;
+  bottom: $base-gap-size * 3;
+  right: $base-gap-size * 3;
+  width: 32px;
+  height: 32px;
+  background: $white;
+  border-radius: 50%;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
