@@ -1,0 +1,18 @@
+@use './src/styles' as *;
+
+.summary {
+  padding: var(--spacing) 0;
+  position: relative;
+  line-height: 150%;
+
+  @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+
+  p {
+    transition: all 1s;
+  }
+
+  .heading {
+    text-align: left;
+    margin-bottom: var(--spacing);
+  }
+}

@@ -6,6 +6,8 @@ import { Project } from "@/types";
 import {projects} from "@/mocks/projects";
 import Heading from "@/components/UI/VHeading/VHeading.vue";
 import CaseStudyShowcase from "@/views/CaseStudy/CaseStudyShowcase/CaseStudyShowcase.vue";
+import CaseStudySummary from "@/views/CaseStudy/CaseStudySummary/CaseStudySummary.vue";
+import TheFooter from "@/components/layouts/TheFooter/TheFooter.vue";
 
 const route = useRoute()
 
@@ -47,25 +49,11 @@ const project: Project | undefined = projects.find(({name}) => name === projectN
           :website-url="project?.link"
           :source-code-url="project?.repository"
         />
-        <!--        <case-summary :content="project.info.summary" />-->
+        <case-study-summary :content="project?.details.summary" />
       </div>
     </div>
+    <the-footer />
   </div>
-<!--  <div class="copyright">-->
-<!--    <div class="container">-->
-<!--      <p>Jakub Serwin © 2021</p>-->
-<!--      <div>-->
-<!--        <a-->
-<!--          href="https://github.com/jakubserwin"-->
-<!--          target="_blank"-->
-<!--        />-->
-<!--        <a-->
-<!--          href="https://www.linkedin.com/in/jakub-serwin-4a1539210/"-->
-<!--          target="_blank"-->
-<!--        />-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
 </template>
 
 <style lang="scss" scoped src="./CaseStudy.scss" />
