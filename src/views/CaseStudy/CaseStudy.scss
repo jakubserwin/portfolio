@@ -1,0 +1,104 @@
+@use './src/styles' as *;
+
+.wrapper {
+  //background: $color-gray; // TODO theme for case study
+}
+
+.content {
+  max-width: 110rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+
+  @include respond(tab-big) {
+    padding: 0 5rem;
+    max-width: none;
+  }
+
+  @include respond(mobile) {
+    padding: 0 3rem;
+  }
+
+  --spacing: 5rem;
+  --case-study-grid-gap: 3.2rem;
+}
+
+.role {
+  padding: var(--spacing) 0;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #e6e6e6;
+    height: 0.1rem;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+    animation: show-short 1s forwards;
+  }
+
+  .heading {
+    text-align: left;
+    margin-bottom: var(--spacing);
+  }
+}
+
+.role {
+  &__content {
+    //transition: all 1s; // TODO role section transition
+
+    display: flex;
+    gap: var(--case-study-grid-gap);
+
+    @include respond(tab-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__col {
+    line-height: 150%;
+    flex: 1;
+
+    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+  }
+}
+
+.dropshadow {
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    background: #000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.2;
+  }
+}
+
+@keyframes show-short {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes show-long {
+  from {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

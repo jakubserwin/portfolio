@@ -41,11 +41,11 @@
   }
 
   &__label {
-    @include font-styling(var(--caption), 400, var(--text-secondary))
+    @include font-styling(var(--caption), 400, var(--text-secondary));
   }
 
   &__name {
-    @include font-styling(var(--heading-tertiary), 500, var(--text))
+    @include font-styling(var(--heading-tertiary), 500, var(--text));
   }
 
   &__caption {

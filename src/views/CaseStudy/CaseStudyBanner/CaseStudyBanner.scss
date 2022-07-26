@@ -1,0 +1,115 @@
+@use './src/styles' as *;
+
+.banner {
+  //margin-top: var(--spacing); // TODO
+  padding: $base-gap-size * 8 0;
+  border-radius: $base-gap-size * 2;
+  display: grid;
+  place-content: center;
+  animation: show-long 1s forwards;
+
+  //:deep(svg) { // TODO bigger logo
+  //}
+
+  @include respond(tab-big) {
+    padding: 5rem 0;
+  }
+}
+
+@keyframes show-long {
+  from {
+    transform: translateY(75px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.intro__text {
+  @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+  line-height: 150%;
+}
+
+.intro {
+  padding: var(--spacing) 0; // TODO
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(3, max-content);
+  gap: var(--case-study-grid-gap);
+
+  opacity: 0;
+  animation: show-long 1s forwards; // TODO move to one file
+
+  &::after {
+    content: '';
+    position: absolute;
+    background-color: #e6e6e6; // TODO
+    height: 0.1rem;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+
+    opacity: 0;
+    animation: show-short 1s forwards;
+  }
+
+  @include respond(tab-small) {
+    grid-template-columns: 1fr;
+  }
+
+  & > &__box:last-child {
+    @include respond(tab-big) {
+      grid-area: 2 / 2 / 3 / 3;
+    }
+
+    @include respond(tab-small) {
+      grid-area: 5 / 1 / 6 / 2;
+    }
+  }
+
+  &__box {
+    &:first-child {
+      grid-column: 1/-1;
+    }
+  }
+
+  &__before {
+    text-transform: uppercase;
+    margin-bottom: 0.4rem;
+
+    @include font-styling(var(--caption), 400);
+  }
+
+  &__text--header {
+    line-height: normal;
+
+    @include font-styling(var(--heading-secondary), 500);
+  }
+
+  &__cols-2 {
+    display: flex;
+    gap: var(--case-study-grid-gap);
+
+    @include respond(tab-big) {
+      grid-area: 3 / 2 / 4 / 3;
+    }
+
+    @include respond(tab-small) {
+      grid-area: 3 / 1 / 4 / 2;
+    }
+  }
+}
+
+@keyframes show-short {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

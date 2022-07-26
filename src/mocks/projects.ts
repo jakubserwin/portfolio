@@ -42,7 +42,7 @@ export const projects: Project[] = [
             role1:
                 'Responsibilities involved creating layouts and efficient dynamic components. I also worked with data from database, and additional libraries.',
             role2:
-                'I collaborated with Dominik and together we created collaborative environment to stay on the same page and be posted about the project’s progress.',
+                'I collaborated with a friend and together we created collaborative environment to stay on the same page and be posted about the project’s progress.',
             summary:
                 'The Minimal Viable Product (MVP) was successfully launched and we are all set to focus on the final product by introducing new features desired by the client. Working on this project helped me improve my skills in vue and become better at layout designing. The collaboration made me realized the importance of clear and coherent communication.',
         },

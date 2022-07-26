@@ -2,7 +2,6 @@
 
 interface Props {
   label: string;
-  isDark: boolean;
 }
 
 const props = defineProps<Props>()
@@ -12,7 +11,6 @@ const props = defineProps<Props>()
   <h2
     ref="header"
     class="heading element-hidden"
-    :class="props.isDark ? 'heading__dark' : ''"
   >
     {{ props.label }}
   </h2>
