@@ -1,3 +1,5 @@
+@use 'mixins' as *;
+
 @keyframes show-short {
   from {
     transform: translateY(20px);
@@ -64,5 +66,227 @@
   }
   100% {
     transform: rotate(2deg) skew(-3deg) translate(-15px, -4px);
+  }
+}
+
+.animate {
+  .header__list--desktop,
+  .header__logo {
+    opacity: 0;
+    animation: show-short 0.2s forwards;
+  }
+
+  .header__list--desktop {
+    animation-delay: 0.3s;
+  }
+
+  .hamburger{
+    opacity: 0;
+    animation: show-short 0.4s 0.4s forwards;
+  }
+
+  .landing-page {
+    &__hello,
+    &__heading,
+    &__subheading,
+    &__button {
+      opacity: 0;
+      animation: show-short 0.5s forwards;
+    }
+
+    &__hello {
+      animation-delay: 0.5s;
+    }
+
+    &__heading {
+      animation-delay: 0.75s;
+    }
+
+    &__subheading {
+      animation-delay: 1s;
+    }
+
+    &__button {
+      animation-delay: 1.25s;
+    }
+  }
+
+  #frame,
+  #creature,
+  #frame-2,
+  #frame-3,
+  #circle,
+  #bar-4,
+  #bar-5,
+  #bgc,
+  #laptop,
+  #link-1,
+  #link-2,
+  #link-3,
+  #pot,
+  #pot-flower-1,
+  #pot-flower-2,
+  #pot-flower-3,
+  #desk,
+  #flower-1,
+  #flower-2 {
+    opacity: 0;
+  }
+
+  #frame {
+    animation: show-short 0.3s 1.5s forwards;
+  }
+
+  #btn {
+    &-1,
+    &-2,
+    &-3 {
+      opacity: 0;
+      animation: show-short 0.15s forwards;
+    }
+
+    &-1 {
+      animation-delay: 1.6s;
+    }
+    &-2 {
+      animation-delay: 1.7s;
+    }
+    &-3 {
+      animation-delay: 1.8s;
+    }
+  }
+
+  #creature,
+  #bar-1,
+  #bar-2,
+  #bar-3,
+  #cta {
+    opacity: 0;
+    animation: show-long 0.2s 2s forwards;
+  }
+
+  #frame-2,
+  #frame-3,
+  #circle,
+  #bar-4,
+  #bar-5 {
+    animation: show-long 0.15s 2.25s forwards;
+  }
+
+  #bgc {
+    animation: slide-in 0.2s 2.5s forwards;
+  }
+
+  #laptop {
+    animation: show-long 0.2s 2.75s forwards;
+  }
+
+  #link-1 {
+    animation: show-short 0.2s 2.75s forwards;
+  }
+
+  #link-2 {
+    animation: show-short 0.2s 2.85s forwards;
+  }
+
+  #link-3 {
+    animation: show-short 0.2s 2.95s forwards;
+  }
+
+  #desk {
+    animation: show-short 0.2s 2.95s forwards;
+  }
+
+  #pot,
+  #pot-flower-1,
+  #pot-flower-2,
+  #pot-flower-3 {
+    animation: show-long 0.25s 3.15s forwards;
+  }
+
+  #leaf-1 {
+    transform-origin: bottom center;
+    animation: wave-1 3s linear 4.6s infinite;
+  }
+
+  #leaf-2 {
+    transform-origin: bottom center;
+    transform: rotate(2deg) skew(-3deg) translate(-17px, -4px);
+    animation: wave-2 3s linear 4.6s infinite;
+  }
+
+  #leaf-3 {
+    transform-origin: bottom center;
+    transform: rotate(2deg) skew(-3deg) translate(-15px, -4px);
+    animation: wave-3 3s linear 4.6s infinite;
+  }
+
+  #flower-1 {
+    animation: show-short 0.2s 3.4s forwards;
+  }
+
+  #flower-2 {
+    animation: show-short 0.2s 3.5s forwards;
+  }
+
+
+  .service-card {
+    opacity: 0;
+    animation: show-short 0.5s forwards;
+
+  &:first-child {
+    animation-delay: 3.5s;
+    @include respond(tab-big) {
+      animation-delay: 1.5s;
+    }
+  }
+
+    &:nth-child(2) {
+      animation-delay: 4s;
+      @include respond(tab-big) {
+        animation-delay: 2s;
+      }
+    }
+
+    &:last-child {
+      animation-delay: 4.5s;
+      @include respond(tab-big) {
+        animation-delay: 2.5s;
+      }
+    }
+  }
+
+  // Case Study
+
+  .banner {
+    animation: show-long 1s forwards;
+  }
+
+  .intro {
+    opacity: 0;
+    animation: show-long 1s forwards;
+
+    &::after {
+      opacity: 0;
+      animation: show-short 1s forwards;
+    }
+  }
+
+  .showcase {
+
+    &__btn {
+      opacity: 0;
+      animation: show-long 1s forwards;
+    }
+
+    &::after {
+      opacity: 0;
+      animation: show-long 1s forwards;
+    }
+  }
+
+  .role {
+    opacity: 0;
+    animation: show-short 1s forwards;
   }
 }

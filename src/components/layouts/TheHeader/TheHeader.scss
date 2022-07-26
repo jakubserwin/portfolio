@@ -11,12 +11,6 @@
     text-decoration: none;
   }
 
-  &__logo,
-  &__list--desktop {
-    opacity: 0;
-    animation: show-short 0.2s forwards;
-  }
-
   &__logo a {
     position: relative;
     z-index: 10;
@@ -28,8 +22,6 @@
     gap: $base-gap-size * 2;
 
     &--desktop {
-      animation-delay: 0.3s;
-
       @include respond(tab-small) {
         display: none;
       }

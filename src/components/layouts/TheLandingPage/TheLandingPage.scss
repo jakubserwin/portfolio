@@ -65,17 +65,8 @@
     }
   }
 
-  &__hello,
-  &__heading,
-  &__subheading,
-  &__button {
-    opacity: 0;
-    animation: show-short 0.5s forwards;
-  }
-
   &__heading {
     @include font-styling(var(--heading-primary), 500);
-    animation-delay: 0.75s;
 
     span {
       color: transparent;
@@ -91,7 +82,6 @@
   }
 
   &__subheading {
-    animation-delay: 1s;
     margin: $base-gap-size * 2 0;
 
     @include respond(tab-big) {
@@ -103,13 +93,11 @@
 
   &__hello {
     margin-bottom: $base-gap-size * 2;
-    animation-delay: 0.5s;
 
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
   }
 
   &__button {
-    animation-delay: 1.25s;
     padding: 1.2rem $base-gap-size * 3;
     text-decoration: none;
     border: none {

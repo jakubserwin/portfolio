@@ -6,24 +6,12 @@
   border-radius: $base-gap-size * 2;
   display: grid;
   place-content: center;
-  animation: show-long 1s forwards;
 
   //:deep(svg) { // TODO bigger logo
   //}
 
   @include respond(tab-big) {
     padding: 5rem 0;
-  }
-}
-
-@keyframes show-long {
-  from {
-    transform: translateY(75px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
   }
 }
 
@@ -40,9 +28,6 @@
   grid-template-rows: repeat(3, max-content);
   gap: var(--case-study-grid-gap);
 
-  opacity: 0;
-  animation: show-long 1s forwards; // TODO move to one file
-
   &::after {
     content: '';
     position: absolute;
@@ -51,9 +36,6 @@
     width: 100%;
     left: 0;
     bottom: 0;
-
-    opacity: 0;
-    animation: show-short 1s forwards;
   }
 
   @include respond(tab-small) {

@@ -16,9 +16,6 @@
     width: 100%;
     left: 0;
     bottom: 0;
-
-    opacity: 0;
-    animation: show-long 1s forwards;
   }
 
   .heading {
@@ -66,9 +63,7 @@
     text-decoration: none;
     padding: 1.2rem $base-gap-size * 3;
 
-    //opacity: 0;
     transition: all 0.3s;
-    animation: show-long 1s forwards;
 
     border: 1px solid var(--text) {
       radius: 0.4rem;
