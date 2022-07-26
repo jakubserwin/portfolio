@@ -6,7 +6,7 @@
   margin-bottom: $gap-size-secondary-desktop;
 
   @include respond(tab-big) {
-    //margin-bottom: $margin-secondary-tablet;
+    //margin-bottom: $margin-secondary-tablet; // TODO spacing
   }
 
   text-align: center;

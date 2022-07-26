@@ -23,9 +23,6 @@ import HeroImage from "@/components/layouts/TheLandingPage/HeroImage/HeroImage.v
           <button class="landing-page__button">
             See My Work
           </button>
-          <!--          <v-button :link="false" data-target="#projects" @click="polyfillScroll">-->
-          <!--            See My Work-->
-          <!--          </v-button>-->
         </div>
         <hero-image />
         <the-services />

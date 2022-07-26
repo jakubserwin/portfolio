@@ -8,7 +8,10 @@ const toggleDark = useToggle(isDark)
 </script>
 
 <template>
-  <div class="theme-switch" @click="toggleDark()">
+  <div
+    class="theme-switch"
+    @click="toggleDark()"
+  >
     <Moon v-if="!isDark" />
     <Sun v-else />
   </div>

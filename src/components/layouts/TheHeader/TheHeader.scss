@@ -2,7 +2,6 @@
 
 .header {
   padding: $base-gap-size  * 4 0;
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -42,7 +41,6 @@
       z-index: 10;
       left: 100%;
       top: 0;
-      height: 100vh;
       height: calc(var(--vh, 1vh) * 100);
       width: 100%;
       background: var(--background);
@@ -90,15 +88,4 @@
 button {
   position: relative;
   z-index: 100;
-}
-
-@keyframes show-short {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
 }

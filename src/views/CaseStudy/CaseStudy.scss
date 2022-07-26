@@ -80,25 +80,3 @@
     opacity: 0.2;
   }
 }
-
-@keyframes show-short {
-  from {
-    transform: translateY(20px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-@keyframes show-long {
-  from {
-    transform: translateY(75px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
