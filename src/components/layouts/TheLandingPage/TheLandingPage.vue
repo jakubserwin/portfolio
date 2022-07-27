@@ -14,11 +14,10 @@ import HeroImage from "@/components/layouts/TheLandingPage/HeroImage/HeroImage.v
             Hello
           </p>
           <h1 class="landing-page__heading">
-            I’m Jakub Serwin, <span>Frontend Developer</span>
+            I’m Jakub Serwin,<span>Frontend Developer</span>
           </h1>
           <h2 class="landing-page__subheading">
-            I love designing and creating websites to help people grow their business without the
-            need to wake myself with coffee.
+            I specialize in designing and creating scalable, beautiful websites to help individuals and businesses grow.
           </h2>
           <button class="landing-page__button">
             See My Work
