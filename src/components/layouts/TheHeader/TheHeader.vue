@@ -8,10 +8,13 @@ const nav = useNavStore()
 const polyfillScroll = (e: any): void => {
   const targetId = e.target.dataset.target;
   const targetElement = document.querySelector(targetId);
-  const rectTop = targetElement.getBoundingClientRect().top;
-  const offsetTop = window.pageYOffset;
 
-  const buffer = 30;
+  if(!targetElement) return
+
+  const rectTop = targetElement.getBoundingClientRect().top;
+  const offsetTop = window.scrollY;
+
+  const buffer = 20;
   const top = rectTop + offsetTop - buffer;
 
   window.scrollTo({
