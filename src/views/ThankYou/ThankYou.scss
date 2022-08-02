@@ -1,0 +1,87 @@
+@use './src/styles' as *;
+
+.confirmation {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: $gap-size-main-desktop;
+  text-align: center;
+
+  &__spinner {
+    position: relative;
+    margin-bottom: 1rem;
+
+    .check {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      animation: fadeIn 0.5s linear forwards 0.6s;
+    }
+
+    .frame {
+      width: 7rem;
+      height: 7rem;
+    }
+
+    .circle {
+      stroke-dasharray: 1000;
+      stroke-dashoffset: 1000;
+      animation: stroke 4s ease-out forwards 0.1s;
+    }
+  }
+
+  &__heading {
+    @include font-styling(var(--heading-secondary), 500);
+  }
+
+  &__desc {
+    margin-top: $base-gap-size;
+    margin-bottom: $base-gap-size * 5;
+
+    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+
+    @include respond(tab-big) {
+      // TODO
+      //margin-bottom: $margin-secondary-tablet;
+    }
+
+    @include respond(mobile) {
+      //margin-bottom: $margin-secondary-mobile;
+      max-width: 25rem;
+    }
+  }
+
+  &__btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: $base-gap-size;
+
+    @include font-styling(var(--base-font-size), 500);
+
+    :deep(svg) {
+      transform: rotate(180deg);
+      path {
+        fill: var(--text);
+      }
+    }
+  }
+}
+
+
+
+@keyframes stroke {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}

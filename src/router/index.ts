@@ -2,12 +2,12 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 const MainView = ():any => import('../views/MainView.vue');
 // const PageNotFound = () => import('../components/views/PageNotFound.vue');
-// const ThankYou = () => import('../components/views/ThankYou.vue');
+const ThankYou = ():any => import('../views/ThankYou/ThankYou.vue');
 const CaseStudy = ():any => import('../views/CaseStudy/CaseStudy.vue');
 
 const routes = [
     { path: '/', component: MainView },
-    // { path: '/thank-you', component: ThankYou },
+    { path: '/thank-you', component: ThankYou },
     {
         path: '/case-study/:name',
         component: CaseStudy,
