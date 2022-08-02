@@ -7,6 +7,7 @@
   position: relative;
 
   @include respond(tab-big) {
+    // TODO
     //margin-top: $margin-main-tablet;
   }
 
@@ -99,7 +100,7 @@
     border: 1px solid $black;
     padding: $base-gap-size;
 
-    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
+    @include font-styling(var(--base-font-size), 300, $black);
   }
 
   &__textarea {

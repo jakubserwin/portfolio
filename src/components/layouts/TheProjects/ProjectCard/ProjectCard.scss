@@ -1,15 +1,11 @@
 @use './src/styles' as *;
 
-.dark .project-card__content {
-  border: 1px solid $dark-grey;
-  border-top: none;
-}
-
 .project-card {
   box-shadow: 0 1px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px;
+  background: $white;
 
   &__header {
     display: grid;
@@ -41,15 +37,15 @@
   }
 
   &__label {
-    @include font-styling(var(--caption), 400, var(--text-secondary));
+    @include font-styling(var(--caption), 400, $dark-grey);
   }
 
   &__name {
-    @include font-styling(var(--heading-tertiary), 500, var(--text));
+    @include font-styling(var(--heading-tertiary), 500, $black);
   }
 
   &__caption {
-    @include font-styling;
+    @include font-styling(var(--base-font-size), 300, $dark-grey);
   }
 
   &__tools {
@@ -59,7 +55,7 @@
   }
 
   &__cta {
-    @include font-styling(var(--caption), 400);
+    @include font-styling(var(--caption), 400, $black);
 
     a {
       display: flex;
@@ -68,10 +64,11 @@
       text-decoration: none;
 
       @include font-styling(var(--caption), 400);
+      color: inherit;
 
       :deep(svg) {
         path {
-          fill: var(--text);
+          fill: $black;
         }
       }
     }

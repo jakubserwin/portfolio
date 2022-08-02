@@ -10,7 +10,7 @@ import Wave from '@/assets/images/wave.svg'
     id="contact"
     class="contact"
   >
-    <wave class="wave"/>
+    <wave class="wave" />
     <div class="container">
       <heading
         label="Get in Touch"
