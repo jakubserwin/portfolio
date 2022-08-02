@@ -126,26 +126,6 @@
       background-position: left 0;
     }
 
-    @include font-styling(var(--base-font-size), 500, $white);
-  }
-}
-
-.confirmation {
-  span {
-    color: green;
-  }
-
-  &__heading {
-    //@include font-styling($color-dark, var(--heading-tertiary), $font-family-primary, 500);
-  }
-
-  &__desc {
-    //@include font-styling(
-    //                darken($font-color-secondary, 15%),
-    //                var(--font-size),
-    //                $font-family-secondary,
-    //                300
-    //);
-    margin-top: 1rem;
+    @include font-styling(var(--base-font-size), 400, $white);
   }
 }

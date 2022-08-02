@@ -62,7 +62,7 @@
     text-transform: uppercase;
     margin-bottom: 0.4rem;
 
-    @include font-styling(var(--caption), 400);
+    @include font-styling(var(--caption), 400, var(--text));
   }
 
   &__text--header {

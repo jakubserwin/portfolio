@@ -111,6 +111,6 @@
       background-position: left 0;
     }
 
-    @include font-styling(var(--base-font-size), 500, $white);
+    @include font-styling(var(--base-font-size), 400, $white);
   }
 }

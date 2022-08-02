@@ -67,7 +67,7 @@
       radius: 0.4rem;
     }
 
-    @include font-styling(var(--base-font-size), 500);
+    @include font-styling(var(--base-font-size), 400);
 
     &:hover {
       background: var(--text);
