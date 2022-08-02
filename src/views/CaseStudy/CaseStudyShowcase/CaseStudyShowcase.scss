@@ -18,16 +18,9 @@
     bottom: 0;
   }
 
-  .heading {
-    text-align: left;
-    margin-bottom: var(--spacing);
-  }
-
-  text-align: center;
-
   &__media {
     border-radius: 2rem;
-    transition: all 1s;
+    transition: opacity 1s, transform 1s;
     box-shadow: rgba(149, 157, 165, 0.5) 0 8px 24px;
     overflow: hidden;
 
@@ -54,6 +47,7 @@
     display: flex;
     justify-content: center;
     gap: 2rem;
+    transition: opacity 1s, transform 1s;
   }
 
   &__btn {

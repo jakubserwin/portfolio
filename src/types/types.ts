@@ -35,3 +35,8 @@ export enum ProjectStatus {
     FINISHED = 'FINISHED',
     IN_PROGRESS = 'IN_PROGRESS'
 }
+
+export enum ObserverAction {
+    OBSERVE = 'OBSERVE',
+    UNOBSERVE = 'UNOBSERVE'
+}

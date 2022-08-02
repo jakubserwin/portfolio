@@ -1,5 +1,8 @@
 <script setup lang="ts">
-import Heading from "@/components/UI/VHeading/VHeading.vue";
+import { onBeforeUnmount, onMounted, ref } from "vue";
+import { observer } from "@/helpers";
+import { useObserverStore } from "@/store/observer";
+import { ObserverAction } from "@/types";
 
 interface Props {
   demoSrc: string;
@@ -8,16 +11,34 @@ interface Props {
 }
 
 const props = defineProps<Props>()
+const observerStore = useObserverStore()
+const showcase = ref<HTMLDivElement | null>(null)
+const showcaseHeading = ref<HTMLHeadingElement | null>(null)
+const ctas = ref<HTMLDivElement | null>(null)
+
+onMounted(() => {
+  if(!showcase.value || !ctas.value || !showcaseHeading.value) return
+  observer(ObserverAction.OBSERVE, showcase.value, ctas.value, showcaseHeading.value)
+})
+onBeforeUnmount(() => {
+  if(!showcase.value || !ctas.value || !showcaseHeading.value) return
+  observer(ObserverAction.UNOBSERVE, showcase.value, ctas.value, showcaseHeading.value)
+})
 </script>
 
 <template>
   <div class="showcase">
-    <heading
-      label="Project Showcase"
-    />
+    <h2
+      ref="showcaseHeading"
+      class="case-study__heading"
+      :class="{'element-hidden': observerStore.useObserverOnCaseStudy}"
+    >
+      Project Showcase
+    </h2>
     <div
       ref="showcase"
-      class="showcase__media element-hidden"
+      class="showcase__media"
+      :class="{'element-hidden': observerStore.useObserverOnCaseStudy}"
     >
       <iframe
         :src="props.demoSrc"
@@ -27,7 +48,11 @@ const props = defineProps<Props>()
         allowfullscreen
       />
     </div>
-    <div class="showcase__ctas">
+    <div
+      ref="ctas"
+      class="showcase__ctas"
+      :class="{'element-hidden': observerStore.useObserverOnCaseStudy}"
+    >
       <a
         v-if="props.websiteUrl"
         class="showcase__btn"

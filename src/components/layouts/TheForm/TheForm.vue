@@ -1,8 +1,24 @@
 <script setup lang="ts">
+import { onBeforeUnmount, onMounted, ref } from "vue";
 import Heading from "@/components/UI/VHeading/VHeading.vue";
 import GitHub from '@/assets/images/icons/github.svg'
 import LinkedIn from '@/assets/images/icons/linkedin.svg'
 import Wave from '@/assets/images/wave.svg'
+import { observer } from '@/helpers';
+import { useObserverStore } from "@/store/observer";
+import { ObserverAction } from "@/types";
+
+const observerStore = useObserverStore()
+const form = ref<HTMLDivElement | null>(null)
+
+onMounted(() => {
+  if(!form.value) return
+  observer(ObserverAction.OBSERVE, form.value)
+})
+onBeforeUnmount(() => {
+  if(!form.value) return
+  observer(ObserverAction.UNOBSERVE, form.value)
+})
 </script>
 
 <template>
@@ -19,7 +35,8 @@ import Wave from '@/assets/images/wave.svg'
         ref="form"
         action="https://formsubmit.co/kuba.serwin99@gmail.com"
         method="POST"
-        class="form element-hidden"
+        class="form"
+        :class="{'element-hidden': observerStore.useObserver}"
       >
         <input
           type="hidden"

@@ -22,6 +22,11 @@ ul {
   list-style: none;
 }
 
+.element-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
+
 .container {
   width: 100%;
   max-width: 144rem;

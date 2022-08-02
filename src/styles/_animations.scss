@@ -255,38 +255,4 @@
       }
     }
   }
-
-  // Case Study
-
-  .banner {
-    animation: show-long 1s forwards;
-  }
-
-  .intro {
-    opacity: 0;
-    animation: show-long 1s forwards;
-
-    &::after {
-      opacity: 0;
-      animation: show-short 1s forwards;
-    }
-  }
-
-  .showcase {
-
-    &__btn {
-      opacity: 0;
-      animation: show-long 1s forwards;
-    }
-
-    &::after {
-      opacity: 0;
-      animation: show-long 1s forwards;
-    }
-  }
-
-  .role {
-    opacity: 0;
-    animation: show-short 1s forwards;
-  }
 }

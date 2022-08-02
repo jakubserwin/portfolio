@@ -6,6 +6,7 @@
   border-radius: $base-gap-size * 2;
   display: grid;
   place-content: center;
+  transition: opacity 1s, transform 1s;
 
   //:deep(svg) { // TODO bigger logo
   //}
@@ -27,6 +28,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(3, max-content);
   gap: var(--case-study-grid-gap);
+  transition: opacity 1s, transform 1s;
 
   &::after {
     content: '';

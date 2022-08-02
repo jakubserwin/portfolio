@@ -4,6 +4,15 @@
   //background: $color-gray; // TODO theme for case study
 }
 
+.case-study {
+  :deep(.case-study__heading) {
+    margin-bottom: var(--spacing);
+    transition: opacity 1s, transform 1s;
+
+    @include font-styling(var(--heading-secondary), 500);
+  }
+}
+
 .content {
   max-width: 110rem;
   margin: 0 auto;
@@ -35,19 +44,10 @@
     width: 100%;
     left: 0;
     bottom: 0;
-
   }
 
-  .heading {
-    text-align: left;
-    margin-bottom: var(--spacing);
-  }
-}
-
-.role {
   &__content {
-    //transition: all 1s; // TODO role section transition
-
+    transition: opacity 1s, transform 1s;
     display: flex;
     gap: var(--case-study-grid-gap);
 
@@ -61,20 +61,5 @@
     flex: 1;
 
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
-  }
-}
-
-.dropshadow {
-  position: relative;
-
-  &::after {
-    content: '';
-    position: absolute;
-    background: #000;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.2;
   }
 }

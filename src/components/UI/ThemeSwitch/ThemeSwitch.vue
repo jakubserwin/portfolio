@@ -14,6 +14,9 @@ const toggleDark = useToggle(isDark)
   >
     <Moon v-if="!isDark" />
     <Sun v-else />
+    <div class="theme-switch__tip">
+      Switch to your prefered theme
+    </div>
   </div>
 </template>
 

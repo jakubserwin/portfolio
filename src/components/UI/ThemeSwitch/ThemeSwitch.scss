@@ -12,4 +12,14 @@
   display: grid;
   place-content: center;
   cursor: pointer;
+
+  &__tip {
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translate(-$base-gap-size, -50%);
+    white-space: nowrap;
+
+    @include font-styling(var(--caption))
+  }
 }
