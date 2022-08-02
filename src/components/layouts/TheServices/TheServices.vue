@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { services } from '@/mocks/services'
-import ServiceCard from "@/components/layouts/TheServices/ServiceCard/ServiceCard.vue";
+import ServiceCard from '@/components/layouts/TheServices/ServiceCard/ServiceCard.vue'
 </script>
 
 <template>

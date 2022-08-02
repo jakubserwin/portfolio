@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from "vue";
-import { observer } from "@/helpers";
-import { useObserverStore } from "@/store/observer";
-import { ObserverAction, Project } from "@/types";
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { observer } from '@/helpers';
+import { useObserverStore } from '@/store/observer';
+import { ObserverAction, Project } from '@/types';
 
 interface Props {
   project: Project;

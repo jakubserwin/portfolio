@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router';
-import { Component } from "vue";
-import { useObserverStore } from "@/store/observer";
+import { Component } from 'vue';
+import { useObserverStore } from '@/store/observer';
 
 const MainView = (): Promise<Component> => import('../views/MainView.vue');
 // const PageNotFound = () => import('../components/views/PageNotFound.vue');

@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { onBeforeMount } from "vue";
-import ThemeSwitch from "@/components/UI/ThemeSwitch/ThemeSwitch.vue";
-import { useObserverStore } from "@/store/observer";
+import { onBeforeMount } from 'vue';
+import ThemeSwitch from '@/components/UI/ThemeSwitch/ThemeSwitch.vue';
+import { useObserverStore } from '@/store/observer';
 const observerStore = useObserverStore()
 
 onBeforeMount(() => {

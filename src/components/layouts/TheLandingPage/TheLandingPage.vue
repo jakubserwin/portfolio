@@ -1,7 +1,8 @@
 <script setup lang="ts">
+import { polyfillScroll } from '@/helpers'
 import TheHeader from '@/components/layouts/TheHeader/TheHeader.vue'
 import TheServices from '@/components/layouts/TheServices/TheServices.vue'
-import HeroImage from "@/components/layouts/TheLandingPage/HeroImage/HeroImage.vue";
+import HeroImage from '@/components/layouts/TheLandingPage/HeroImage/HeroImage.vue'
 </script>
 
 <template>
@@ -19,7 +20,11 @@ import HeroImage from "@/components/layouts/TheLandingPage/HeroImage/HeroImage.v
           <h2 class="landing-page__subheading">
             I specialize in designing and creating scalable, beautiful websites to help individuals and businesses grow.
           </h2>
-          <button class="landing-page__button">
+          <button
+            class="landing-page__button"
+            data-target="#projects"
+            @click="polyfillScroll"
+          >
             See My Work
           </button>
         </div>

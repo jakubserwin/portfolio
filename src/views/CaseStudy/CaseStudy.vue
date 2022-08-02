@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
 import TheHeader from '@/components/layouts/TheHeader/TheHeader.vue'
-import CaseStudyBanner from "@/views/CaseStudy/CaseStudyBanner/CaseStudyBanner.vue";
-import { ObserverAction, Project } from "@/types";
-import {projects} from "@/mocks/projects";
-import CaseStudyShowcase from "@/views/CaseStudy/CaseStudyShowcase/CaseStudyShowcase.vue";
-import CaseStudySummary from "@/views/CaseStudy/CaseStudySummary/CaseStudySummary.vue";
-import TheFooter from "@/components/layouts/TheFooter/TheFooter.vue";
-import { onBeforeUnmount, onMounted, ref } from "vue";
-import { observer } from "@/helpers";
-import { useObserverStore } from "@/store/observer";
+import CaseStudyBanner from '@/views/CaseStudy/CaseStudyBanner/CaseStudyBanner.vue';
+import { ObserverAction, Project } from '@/types';
+import {projects} from '@/mocks/projects';
+import CaseStudyShowcase from '@/views/CaseStudy/CaseStudyShowcase/CaseStudyShowcase.vue';
+import CaseStudySummary from '@/views/CaseStudy/CaseStudySummary/CaseStudySummary.vue';
+import TheFooter from '@/components/layouts/TheFooter/TheFooter.vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
+import { observer } from '@/helpers';
+import { useObserverStore } from '@/store/observer';
 
 const route = useRoute()
 const observerStore = useObserverStore()

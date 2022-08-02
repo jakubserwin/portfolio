@@ -1,27 +1,9 @@
 <script setup lang="ts">
 import { useNavStore } from '@/store/nav'
-import 'scroll-behavior-polyfill';
-import HamburgerMenu from "@/components/layouts/TheHeader/HamburgerMenu/HamburgerMenu.vue";
+import { polyfillScroll } from '@/helpers'
+import HamburgerMenu from '@/components/layouts/TheHeader/HamburgerMenu/HamburgerMenu.vue'
 
 const nav = useNavStore()
-
-const polyfillScroll = (e: any): void => {
-  const targetId = e.target.dataset.target;
-  const targetElement = document.querySelector(targetId);
-
-  if(!targetElement) return
-
-  const rectTop = targetElement.getBoundingClientRect().top;
-  const offsetTop = window.scrollY;
-
-  const buffer = 20;
-  const top = rectTop + offsetTop - buffer;
-
-  window.scrollTo({
-    top,
-    behavior: 'smooth',
-  });
-}
 
 const toggleNav = (): void => {
   nav.toggleNav()

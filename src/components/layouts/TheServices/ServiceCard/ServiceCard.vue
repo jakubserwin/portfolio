@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Service } from "@/types";
+import { Service } from '@/types'
 
 interface Props {
   service: Service;

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import ArrowRight from '@/assets/images/icons/arrow-right.svg'
-import { Project, ProjectStatus } from "@/types";
+import { Project, ProjectStatus } from '@/types';
 
 interface Props {
   project: Project;

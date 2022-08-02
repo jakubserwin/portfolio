@@ -1,11 +1,11 @@
 <script setup lang="ts">
-import { onBeforeUnmount, onMounted, ref } from "vue";
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import Heading from '@/components/UI/VHeading/VHeading.vue'
 import ProjectCard from '@/components/layouts/TheProjects/ProjectCard/ProjectCard.vue'
-import { projects } from "@/mocks/projects";
+import { projects } from '@/mocks/projects';
 import { observer } from '@/helpers';
-import { useObserverStore } from "@/store/observer";
-import { ObserverAction } from "@/types";
+import { useObserverStore } from '@/store/observer';
+import { ObserverAction } from '@/types';
 
 const observerStore = useObserverStore()
 const projectsParent = ref<HTMLDivElement | null>(null)
