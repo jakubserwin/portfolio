@@ -3,7 +3,6 @@ import { Component } from 'vue';
 import { useObserverStore } from '@/store/observer';
 
 const MainView = (): Promise<Component> => import('../views/MainView.vue');
-// const PageNotFound = () => import('../components/views/PageNotFound.vue');
 const ThankYou = (): Promise<Component> => import('../views/ThankYou/ThankYou.vue');
 const CaseStudy = (): Promise<Component> => import('../views/CaseStudy/CaseStudy.vue');
 
@@ -14,10 +13,10 @@ const routes = [
         path: '/case-study/:name',
         component: CaseStudy,
     },
-    // {
-    //     path: '/:notFound(.*)',
-    //     component: PageNotFound,
-    // },
+    {
+        path: '/:notFound(.*)',
+        redirect: '/',
+    },
 ];
 
 const router = createRouter({
