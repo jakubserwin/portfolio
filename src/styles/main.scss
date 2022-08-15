@@ -48,9 +48,9 @@ ul {
 section {
   padding: ($gap-size-main-desktop) 0;
 
-  //@include respond(tab-small) {
-  //  padding: ($gap-size-main-desktop / 2.5) 0;
-  //}
+  @include respond(tab-small) {
+    padding: ($gap-size-main-desktop / 2) 0;
+  }
 }
 
 .hide {
