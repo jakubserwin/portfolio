@@ -12,6 +12,10 @@
     place-content: center;
     padding: $base-gap-size 0;
     border-radius: 4px 4px 0 0;
+
+    :deep(svg) {
+      height: 3.2rem;
+    }
   }
 
   &__content {

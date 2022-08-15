@@ -44,13 +44,7 @@
 
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
 
-    @include respond(tab-big) {
-      // TODO
-      //margin-bottom: $margin-secondary-tablet;
-    }
-
     @include respond(mobile) {
-      //margin-bottom: $margin-secondary-mobile;
       max-width: 25rem;
     }
   }

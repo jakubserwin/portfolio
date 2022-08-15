@@ -1,9 +1,5 @@
 @use './src/styles' as *;
 
-.wrapper {
-  //background: $color-gray; // TODO theme for case study
-}
-
 .case-study {
   :deep(.case-study__heading) {
     margin-bottom: var(--spacing);
@@ -28,8 +24,12 @@
     padding: 0 3rem;
   }
 
-  --spacing: 5rem;
+  --spacing: 4.8rem;
   --case-study-grid-gap: 3.2rem;
+
+  @include respond(tab-small) {
+    --spacing: 4rem;
+  }
 }
 
 .role {

@@ -7,12 +7,13 @@
   position: relative;
 
   @include respond(tab-big) {
-    // TODO
-    //margin-top: $margin-main-tablet;
+    margin-top: $gap-size-main-tablet;
+    padding-bottom: $gap-size-secondary-tablet;
   }
 
   @include respond(mobile) {
-    //margin-top: $margin-main-mobile - 5rem;
+    margin-top: $gap-size-main-mobile;
+    padding-bottom: $gap-size-secondary-mobile;
   }
 
   &__socials {
@@ -58,6 +59,10 @@
 
   :deep(.heading) {
     color: var(--background);
+
+    @include respond(tab-big) {
+      padding-top: $gap-size-secondary-mobile;
+    }
   }
 }
 

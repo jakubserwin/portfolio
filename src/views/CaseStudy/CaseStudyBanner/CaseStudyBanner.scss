@@ -1,15 +1,17 @@
 @use './src/styles' as *;
 
 .banner {
-  //margin-top: var(--spacing); // TODO
+  margin-top: calc(var(--spacing) / 2);
   padding: $base-gap-size * 8 0;
   border-radius: $base-gap-size * 2;
   display: grid;
   place-content: center;
   transition: opacity 1s, transform 1s;
 
-  //:deep(svg) { // TODO bigger logo
-  //}
+  :deep(svg) {
+    width: 4.8rem;
+    height: 4.8rem;
+  }
 
   @include respond(tab-big) {
     padding: 5rem 0;
@@ -22,7 +24,7 @@
 }
 
 .intro {
-  padding: var(--spacing) 0; // TODO
+  padding: var(--spacing) 0;
   position: relative;
   display: grid;
   grid-template-columns: 1fr 1fr;

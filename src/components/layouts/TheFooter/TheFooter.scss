@@ -2,7 +2,7 @@
 
 .footer {
   background: $black;
-  border-top: 1px solid $very-dark-grey; // TODO
+  border-top: 1px solid $very-dark-grey;
   padding: $base-gap-size * 2 0;
 
   @include font-styling(var(--caption), 300, var(--text-secondary));

@@ -7,7 +7,7 @@
   @include font-styling(var(--heading-secondary), 500);
 
   @include respond(tab-big) {
-    //margin-bottom: $margin-secondary-tablet; // TODO spacing
+    margin-bottom: $gap-size-secondary-tablet;
   }
 
   &__transitions {
