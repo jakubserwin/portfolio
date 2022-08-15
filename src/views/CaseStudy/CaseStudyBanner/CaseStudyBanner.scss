@@ -60,9 +60,10 @@
   }
 
   &__text {
+    line-height: 150%;
+
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
 
-    line-height: 150%;
     &--header {
       line-height: normal;
 

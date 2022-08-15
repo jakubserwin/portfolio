@@ -36,7 +36,6 @@
   &__footer {
     margin-top: auto;
     flex-direction: row;
-    align-items: end;
     justify-content: space-between;
   }
 
@@ -59,6 +58,8 @@
   }
 
   &__cta {
+    margin-top: auto;
+
     @include font-styling(var(--caption), 400, $black);
 
     a {
