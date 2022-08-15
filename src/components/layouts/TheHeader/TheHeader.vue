@@ -7,6 +7,7 @@ const nav = useNavStore()
 
 const toggleNav = (): void => {
   nav.toggleNav()
+  console.warn('toggle nav')
 }
 </script>
 
@@ -52,26 +53,33 @@ const toggleNav = (): void => {
         class="header__list header__list--mobile"
         :class="{ 'active': nav.isNavActive }"
       >
-        <li>
-          <a
-            href="#projects"
+        <li @click="toggleNav">
+          <router-link
+            to="/"
             class="header__link"
-            @click="toggleNav"
-          >Projects</a>
+          >
+            Home
+          </router-link>
         </li>
-        <li>
-          <a
-            href="#tools"
+        <li @click="toggleNav">
+          <router-link
+            to="/"
             class="header__link"
-            @click="toggleNav"
-          >Technology</a>
+            data-target="#projects"
+            @click="polyfillScroll"
+          >
+            Projects
+          </router-link>
         </li>
-        <li>
-          <a
-            href="#contact"
+        <li @click="toggleNav">
+          <router-link
+            to="/"
             class="header__link"
-            @click="toggleNav"
-          >Contact</a>
+            data-target="#contact"
+            @click="polyfillScroll"
+          >
+            Contact
+          </router-link>
         </li>
         <li>
           <a

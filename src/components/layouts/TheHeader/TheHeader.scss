@@ -22,15 +22,15 @@
     display: flex;
     gap: $base-gap-size * 2;
 
+    li:first-child {
+      .router-link-active {
+        font-weight: 400;
+      }
+    }
+
     &--desktop {
       @include respond(tab-small) {
         display: none;
-      }
-
-      li:first-child {
-        .router-link-active {
-          font-weight: 400;
-        }
       }
     }
 

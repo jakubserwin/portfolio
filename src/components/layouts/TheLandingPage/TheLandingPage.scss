@@ -93,7 +93,7 @@
   }
 
   &__hello {
-    margin-bottom: $base-gap-size * 2;
+    margin-bottom: $base-gap-size;
 
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
   }
