@@ -32,19 +32,14 @@
   }
 }
 
+.dark .role {
+  border-bottom-color: $very-dark-grey;
+}
+
 .role {
   padding: var(--spacing) 0;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #e6e6e6;
-    height: 0.1rem;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-  }
+  border-bottom: 1px solid $very-bright-grey;
 
   &__content {
     transition: opacity 1s, transform 1s;

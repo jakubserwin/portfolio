@@ -18,6 +18,10 @@
   }
 }
 
+.dark .intro {
+  border-bottom-color: $very-dark-grey;
+}
+
 .intro {
   padding: var(--spacing) 0;
   position: relative;
@@ -26,16 +30,7 @@
   grid-template-rows: repeat(3, max-content);
   gap: var(--case-study-grid-gap);
   transition: opacity 1s, transform 1s;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #e6e6e6; // TODO
-    height: 0.1rem;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-  }
+  border-bottom: 1px solid $very-bright-grey;
 
   @include respond(tab-small) {
     grid-template-columns: 1fr;
@@ -68,7 +63,6 @@
     @include font-styling(var(--base-font-size), 300, var(--text-secondary));
 
     line-height: 150%;
-
     &--header {
       line-height: normal;
 

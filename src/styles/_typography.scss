@@ -32,12 +32,11 @@ $font-family-primary: "Rubik", sans-serif;
   }
 }
 
-// TODO
 @include respond(tab-big) {
   :root {
     --heading-primary: calc(var(--base-font-size) * 2.65); // 39.75px
-    //--heading-secondary: calc(var(--base-font-size) * 1.8); // 27px
-    //--heading-tertiary: calc(var(--base-font-size) * 1.15); // 17.25px
+    --heading-secondary: calc(var(--base-font-size) * 1.8); // 27px
+    --heading-tertiary: calc(var(--base-font-size) * 1.15); // 17.25px
   }
 }
 

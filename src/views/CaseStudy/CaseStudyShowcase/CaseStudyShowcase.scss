@@ -1,25 +1,20 @@
 @use "./src/styles" as *;
 
-.dark .showcase__media {
-  box-shadow: none;
+.dark .showcase {
+  border-bottom-color: $very-dark-grey;
+
+  &__media {
+    box-shadow: none;
+  }
 }
 
 .showcase {
   padding: var(--spacing) 0;
   position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: #e6e6e6;
-    height: 0.1rem;
-    width: 100%;
-    left: 0;
-    bottom: 0;
-  }
+  border-bottom: 1px solid $very-bright-grey;
 
   &__media {
-    border-radius: 2rem;
+    border-radius: $base-gap-size;
     transition: opacity 1s, transform 1s;
     box-shadow: rgb(149 157 165 / 50%) 0 8px 24px;
     overflow: hidden;
