@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 .confirmation {
   height: 100vh;
@@ -19,7 +19,7 @@
       left: 50%;
       transform: translate(-50%, -50%);
       opacity: 0;
-      animation: fadeIn 0.5s linear forwards 0.6s;
+      animation: fade-in 0.5s linear forwards 0.6s;
     }
 
     .frame {
@@ -59,6 +59,7 @@
 
     :deep(svg) {
       transform: rotate(180deg);
+
       path {
         fill: var(--text);
       }
@@ -66,15 +67,13 @@
   }
 }
 
-
-
 @keyframes stroke {
   to {
     stroke-dashoffset: 0;
   }
 }
 
-@keyframes fadeIn {
+@keyframes fade-in {
   to {
     opacity: 1;
   }

@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 @mixin hamburger-bars {
   width: 100%;
@@ -37,7 +37,7 @@
     &::after {
       @include hamburger-bars;
 
-      content: '';
+      content: "";
       left: 0;
       transition: transform 0.3s ease-in-out;
     }
@@ -55,10 +55,11 @@
       transition: background-color 0.1s ease-in-out;
 
       &::before {
-        transform: translatey(0.8rem) rotate(45deg);
+        transform: translateY(0.8rem) rotate(45deg);
       }
+
       &::after {
-        transform: translatey(-0.8rem) rotate(-45deg);
+        transform: translateY(-0.8rem) rotate(-45deg);
       }
     }
   }

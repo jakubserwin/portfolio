@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 .dark .showcase__media {
   box-shadow: none;
@@ -9,7 +9,7 @@
   position: relative;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #e6e6e6;
     height: 0.1rem;
@@ -21,15 +21,14 @@
   &__media {
     border-radius: 2rem;
     transition: opacity 1s, transform 1s;
-    box-shadow: rgba(149, 157, 165, 0.5) 0 8px 24px;
+    box-shadow: rgb(149 157 165 / 50%) 0 8px 24px;
     overflow: hidden;
-
     position: relative;
     padding-bottom: 56.25%;
-    height: 0px;
+    height: 0;
 
     @include respond(tab-small) {
-      box-shadow: rgba(149, 157, 165, 0.65) 0 8px 25px;
+      box-shadow: rgb(149 157 165 / 65%) 0 8px 25px;
     }
 
     iframe {
@@ -56,8 +55,7 @@
     text-decoration: none;
     padding: 1.2rem $base-gap-size * 3;
     transition: all 0.3s;
-
-    border: 1px solid var(--text) {
+    border: 1px solid var(--text){
       radius: 0.4rem;
     }
 
@@ -65,7 +63,7 @@
 
     &:hover {
       background: var(--text);
-      color: var(--background)
+      color: var(--background);
     }
   }
 }

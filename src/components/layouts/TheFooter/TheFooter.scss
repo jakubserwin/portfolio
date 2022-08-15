@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 .footer {
   background: $black;
@@ -19,7 +19,7 @@
   }
 
   :deep(svg) {
-    width: 1.6rem ;
+    width: 1.6rem;
     height: 1.6rem;
 
     path {

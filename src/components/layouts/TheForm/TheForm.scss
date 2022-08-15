@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 .contact {
   margin-top: $gap-size-main-desktop * 2;
@@ -31,7 +31,7 @@
       }
 
       &:active {
-        transform: translateY(0rem);
+        transform: translateY(0);
       }
     }
 
@@ -72,7 +72,6 @@
   &__wrapper {
     max-width: 55rem;
     margin: 0 auto;
-
     display: grid;
     grid: {
       template-columns: 1fr 1fr;

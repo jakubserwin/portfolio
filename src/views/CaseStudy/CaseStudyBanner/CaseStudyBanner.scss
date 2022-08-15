@@ -1,4 +1,4 @@
-@use './src/styles' as *;
+@use "./src/styles" as *;
 
 .banner {
   margin-top: calc(var(--spacing) / 2);
@@ -18,11 +18,6 @@
   }
 }
 
-.intro__text {
-  @include font-styling(var(--base-font-size), 300, var(--text-secondary));
-  line-height: 150%;
-}
-
 .intro {
   padding: var(--spacing) 0;
   position: relative;
@@ -33,7 +28,7 @@
   transition: opacity 1s, transform 1s;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: #e6e6e6; // TODO
     height: 0.1rem;
@@ -69,10 +64,16 @@
     @include font-styling(var(--caption), 400, var(--text));
   }
 
-  &__text--header {
-    line-height: normal;
+  &__text {
+    @include font-styling(var(--base-font-size), 300, var(--text-secondary));
 
-    @include font-styling(var(--heading-secondary), 500);
+    line-height: 150%;
+
+    &--header {
+      line-height: normal;
+
+      @include font-styling(var(--heading-secondary), 500);
+    }
   }
 
   &__cols-2 {
